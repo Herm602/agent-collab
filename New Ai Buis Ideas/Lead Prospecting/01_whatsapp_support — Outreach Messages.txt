@@ -1,0 +1,100 @@
+OUTREACH MESSAGE TEMPLATES
+Idea: AI WhatsApp Customer Support
+Tagline: Never miss a WhatsApp lead again — 24/7 AI support from R2,500/month
+Offer: FREE 14-day pilot → R2,500/month after
+=================================================================
+
+TARGET INDUSTRIES:
+  • Hair Salons & Beauty Clinics
+  • Car Dealerships
+  • Dental Practices
+  • Real Estate Agencies
+  • Restaurants
+
+TARGET CITIES:
+  • Johannesburg
+  • Cape Town
+  • Durban
+  • Pretoria
+  • Port Elizabeth
+
+APOLLO.IO SEARCH FILTERS:
+  industries: ['Beauty & Personal Care', 'Automotive', 'Healthcare', 'Real Estate']
+  employee_range: 1-20
+  country: South Africa
+  keywords: ['WhatsApp', 'bookings', 'appointments']
+
+MANUAL SEARCH QUERIES (Google/Instagram):
+  • hair salon [city] contact WhatsApp
+  • car dealership [city] site:instagram.com
+  • dental practice [city] Facebook
+  • estate agent [city] WhatsApp
+  • restaurant [city] "contact us" WhatsApp
+
+=================================================================
+MESSAGE TEMPLATES (copy-paste and personalise)
+=================================================================
+
+─── WHATSAPP ───
+
+Hi [Name] 👋 I noticed your [business type] in [city] — do you handle all your WhatsApp messages manually?
+
+I help SA businesses automate their WhatsApp customer support using AI — so leads get instant responses 24/7, even when you're closed.
+
+A salon in [city] went from missing 30% of bookings to fully booked within 2 weeks.
+
+Would a 15-min call be worth it to see if this could work for [Business Name]?
+
+— Hermie
+
+─── INSTAGRAM DM ───
+
+Hey [Name]! 👋 Love what you're doing with [Business Name].
+
+Quick question — how do you handle WhatsApp inquiries when you're busy or after hours? I work with SA businesses to automate that process using AI, so every message gets a reply instantly.
+
+Helped a [city] salon book 47 extra appointments in one month just from after-hours WhatsApp messages they were missing.
+
+Would it be cool to show you how it works? Takes 15 mins. No obligation. 🙏
+
+─── EMAIL ───
+
+Subject: [Business Name] — your WhatsApp is losing you bookings
+
+Hi [Name],
+
+I'll keep this short.
+
+Most [business type] in SA lose 20-35% of potential bookings from WhatsApp messages that arrive after hours or when staff are busy.
+
+I've built an AI system that responds to every WhatsApp message instantly — 24 hours a day — qualifying leads, booking appointments, and answering FAQs.
+
+A [business type] in [city] used this to add R18,000/month in additional bookings. Setup takes 48 hours.
+
+Can I show you a 5-minute demo specific to [Business Name]?
+
+Best,
+Hermie Ihmig
+Levinn Group
+[phone]
+
+─── OBJECTION HANDLING ───
+
+Q: Too expensive
+A: The system pays for itself if it saves 1 missed booking per week. What's your average transaction value?
+
+Q: Already have someone
+A: Great — the AI works alongside your team, handling after-hours and overflow. They stop doing admin, start doing sales.
+
+Q: Not interested
+A: Completely fine. Can I ask — how do you currently handle WhatsApp messages after hours?
+
+Q: How does it work
+A: I build a custom AI bot on your WhatsApp Business number. It handles FAQs, bookings, and lead capture automatically. You get a dashboard showing every conversation. Takes 48 hours to set up.
+
+─── YOUR 90-DAY TARGET ───
+
+  Outreach per day : 10 contacts
+  Target conversion: 10%
+  Target clients   : 5 within 90 days
+  Target MRR       : R12,500

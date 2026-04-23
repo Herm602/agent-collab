@@ -1,0 +1,39 @@
+PIPELINE ROI CALCULATOR
+How many messages → how much MRR?
+==================================================
+
+Messages sent : 50
+  Responses (10%) : 5
+  Calls booked (60%): 3
+  Pilots started (50%): 1
+  Paying clients (70%): 0
+  Monthly MRR: R0 @ R4,500 avg
+
+Messages sent : 100
+  Responses (10%) : 10
+  Calls booked (60%): 6
+  Pilots started (50%): 3
+  Paying clients (70%): 2
+  Monthly MRR: R9,000 @ R4,500 avg
+
+Messages sent : 200
+  Responses (10%) : 20
+  Calls booked (60%): 12
+  Pilots started (50%): 6
+  Paying clients (70%): 4
+  Monthly MRR: R18,000 @ R4,500 avg
+
+Messages sent : 500
+  Responses (10%) : 50
+  Calls booked (60%): 30
+  Pilots started (50%): 15
+  Paying clients (70%): 10
+  Monthly MRR: R45,000 @ R4,500 avg
+
+Messages sent : 1,000
+  Responses (10%) : 100
+  Calls booked (60%): 60
+  Pilots started (50%): 30
+  Paying clients (70%): 21
+  Monthly MRR: R94,500 @ R4,500 avg
+

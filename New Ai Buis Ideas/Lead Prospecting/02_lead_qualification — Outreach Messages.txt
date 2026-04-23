@@ -1,0 +1,63 @@
+OUTREACH MESSAGE TEMPLATES
+Idea: AI Lead Qualification Bot
+Tagline: Only talk to buyers who are ready — AI filters the rest
+Offer: 30-day free pilot → performance pricing (R80-150/qualified lead)
+=================================================================
+
+TARGET INDUSTRIES:
+  • Real Estate Agencies
+  • Insurance Brokers
+  • Car Dealerships
+  • Financial Advisors
+
+TARGET CITIES:
+  • Johannesburg
+  • Cape Town
+  • Durban
+  • Pretoria
+  • Sandton
+
+APOLLO.IO SEARCH FILTERS:
+  industries: ['Real Estate', 'Insurance', 'Financial Services', 'Automotive']
+  job_titles: ['Principal', 'Sales Manager', 'Branch Manager', 'Director']
+  employee_range: 5-50
+  country: South Africa
+
+MANUAL SEARCH QUERIES (Google/Instagram):
+  • real estate principal [city] LinkedIn
+  • insurance broker FSCA [city]
+  • financial advisor CFP [city]
+  • car dealership sales manager [city]
+
+=================================================================
+MESSAGE TEMPLATES (copy-paste and personalise)
+=================================================================
+
+─── LINKEDIN ───
+
+Hi [Name], I noticed you're running a [type] team in [city] — how many leads do you get monthly from Property24/AutoTrader/aggregators?
+
+I've built an AI qualification system that pre-screens every inbound lead in 90 seconds — delivering only the hot ones to your salespeople.
+
+An estate agent principal in [city] went from 200 leads/month to 22 qualified meetings — same time, 10x better conversion.
+
+Worth a 15-min call? I'll show you the exact system.
+
+─── WHATSAPP ───
+
+Hi [Name] 👋 [Name] here from Levinn Group.
+
+I build AI lead qualification systems for SA [industry] companies.
+
+Your team probably spends hours chasing leads that go nowhere. Our AI qualifies them in 90 seconds — before your team touches a single one.
+
+Real result: Estate agent principal in [city] reduced unqualified lead follow-up by 70%. Same team, 3x more deals.
+
+Can I show you a 10-min demo? No cost, no obligation.
+
+─── YOUR 90-DAY TARGET ───
+
+  Outreach per day : 8 contacts
+  Target conversion: 15%
+  Target clients   : 4 within 90 days
+  Target MRR       : R32,000

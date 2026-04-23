@@ -1,0 +1,75 @@
+YOUTUBE VIDEO SCRIPT — Idea #3: AI Booking Automation
+============================================================
+PHASE: PHASE 1 — MAKE MONEY NOW (0-6 months)
+ESTIMATED RUNTIME: 12–15 minutes
+FORMAT: Talking head + screen share (business plan walkthrough)
+
+─── HOOK (0:00–0:30) ───
+"What if I told you there is a business you could start this week
+in South Africa that generates R150,000 a month?
+And the startup cost is less than R5,000?
+Today I am breaking down exactly how to do it —
+step by step, with real numbers."
+
+─── INTRO (0:30–1:30) ───
+"Welcome back. I'm Hermie Ihmig — SA entrepreneur, husband,
+and someone who is going all-in on AI businesses.
+Today we are looking at Idea #3 from my 30 AI Business Ideas series:
+AI Booking Automation."
+
+─── THE PROBLEM (1:30–3:00) ───
+Service businesses in SA — barbers, dentists, gyms, physiotherapists, tutors, photographers — still manage bookings via manual WhatsApp, phone calls, or paper diaries. This is broken. No-shows cost SA service businesses an estimated R4.2 billion annually. AI booking automation solves this: automated scheduling, WhatsApp/SMS reminders, rescheduling handling, and calendar sync. You build and manage 
+
+[B-ROLL SUGGESTION: Show WhatsApp messages / frustrated business owner]
+
+─── THE SOLUTION (3:00–5:30) ───
+The Problem
+Average barber shop loses R1,500–R3,000/week to no-shows and last-minute cancellations.
+Dentists spend 2+ hours/day on phone calls — up to 40% are booking-related.
+Gyms lose 25% of trial leads because follow-up takes too long.
+Existing tools (Calendly, etc.) are not WhatsApp-native and too complex for SA SMEs.
+The Solution
+You build a WhatsApp-first booking system using tools like WATI
+
+[SCREEN SHARE: Show the actual tool / demo / workflow]
+
+─── THE MARKET (5:30–7:00) ───
+Barbershops: 95,000+ in SA, predominantly informal. Average revenue R15,000–R40,000/month. No-shows cost R500–R2,000/week.
+Dentists: 10,000+ private dental practitioners. Average practice turnover R800K–R2M/year. High willingness to pay for efficiency.
+Independent gyms: 3,500+ independent gyms. Tria
+
+[GRAPHIC: Market size numbers, SA stats]
+
+─── THE MONEY (7:00–9:30) ───
+How does this make money?
+
+Simple, clear pricing. No hidden fees. Month-to-month after 3-month minimum contract.
+Solo Practitioner (1 person): R2,500/month — bookings, reminders, calendar sync
+Small Business (2–5 staff): R4,000/month — multi-staff scheduling, team calendar
+Clinic/Multi-Branch: R7,500/month — multi-location, patient management integration
+
+Financial projection:
+
+
+─── HOW TO START (9:30–12:00) ───
+Here's your 90-day roadmap:
+Week 1–2: [Research and build demo]
+Week 3–4: [First outreach — 50 businesses]
+Week 5–8: [Land first 3 clients]
+Week 9–12: [Scale to 10 clients]
+
+─── CLOSE (12:00–13:00) ───
+"I'm documenting all 30 of these ideas publicly.
+If you want the full business plan for this idea — link in description.
+Like, subscribe, and comment below: which idea are you starting first?
+I'll reply to every comment this week."
+
+─── DESCRIPTION ───
+Download full business plan: [link]
+30 AI Business Ideas overview: [link]
+Subscribe for weekly SA AI business content
+Instagram/LinkedIn: @hermie_ihmig
+
+─── TAGS ───
+AI business South Africa, make money AI, AI automation SA,
+WhatsApp bot business, AI entrepreneur South Africa, ai booking automation

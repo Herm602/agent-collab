@@ -1,0 +1,73 @@
+YOUTUBE VIDEO SCRIPT — Idea #1: AI WhatsApp Customer Support
+============================================================
+PHASE: PHASE 1 — MAKE MONEY NOW (0-6 months)
+ESTIMATED RUNTIME: 12–15 minutes
+FORMAT: Talking head + screen share (business plan walkthrough)
+
+─── HOOK (0:00–0:30) ───
+"What if I told you there is a business you could start this week
+in South Africa that generates R150,000 a month?
+And the startup cost is less than R5,000?
+Today I am breaking down exactly how to do it —
+step by step, with real numbers."
+
+─── INTRO (0:30–1:30) ───
+"Welcome back. I'm Hermie Ihmig — SA entrepreneur, husband,
+and someone who is going all-in on AI businesses.
+Today we are looking at Idea #1 from my 30 AI Business Ideas series:
+AI WhatsApp Customer Support."
+
+─── THE PROBLEM (1:30–3:00) ───
+South Africa has over 23 million WhatsApp users — the highest penetration rate in Africa. Yet 80% of SMEs still handle customer queries manually, losing leads after hours and burning staff hours on repetitive questions. This business deploys AI-powered WhatsApp bots for South African SMEs, automating customer support, bookings, and lead capture at a fraction of the cost of a human agent. You charg
+
+[B-ROLL SUGGESTION: Show WhatsApp messages / frustrated business owner]
+
+─── THE SOLUTION (3:00–5:30) ───
+The Problem
+SME owners answer the same 20 questions every day — hours wasted.
+After-hours messages go unanswered — leads and revenue lost.
+Hiring a dedicated support person costs R8,000–R15,000/month minimum.
+85% of SA consumers prefer WhatsApp over email or phone for business queries.
+The Solution
+You build and manage custom WhatsApp AI bots (using tools like Twilio, WATI, or Interakt + OpenAI/Ge
+
+[SCREEN SHARE: Show the actual tool / demo / workflow]
+
+─── THE MARKET (5:30–7:00) ───
+Primary Segments
+Hair salons & beauty clinics: 85,000+ in SA, manage bookings via WhatsApp already. Target: township & suburban salons in Joburg, Cape Town, Durban.
+Car dealerships: 4,200+ dealers, high lead volume, strong ROI case — one saved lead = R15,000–50,000 deal.
+Medical & dental practices: 
+
+[GRAPHIC: Market size numbers, SA stats]
+
+─── THE MONEY (7:00–9:30) ───
+How does this make money?
+
+
+
+Financial projection:
+
+
+─── HOW TO START (9:30–12:00) ───
+Here's your 90-day roadmap:
+Week 1–2: [Research and build demo]
+Week 3–4: [First outreach — 50 businesses]
+Week 5–8: [Land first 3 clients]
+Week 9–12: [Scale to 10 clients]
+
+─── CLOSE (12:00–13:00) ───
+"I'm documenting all 30 of these ideas publicly.
+If you want the full business plan for this idea — link in description.
+Like, subscribe, and comment below: which idea are you starting first?
+I'll reply to every comment this week."
+
+─── DESCRIPTION ───
+Download full business plan: [link]
+30 AI Business Ideas overview: [link]
+Subscribe for weekly SA AI business content
+Instagram/LinkedIn: @hermie_ihmig
+
+─── TAGS ───
+AI business South Africa, make money AI, AI automation SA,
+WhatsApp bot business, AI entrepreneur South Africa, ai whatsapp customer support
