@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SOP Builder</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f9fafb; }
+    .container { max-width: 1024px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 16px 0; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 700; color: #2563eb; }
+    .user-menu { display: flex; align-items: center; gap: 24px; }
+    .user-email { color: #666; font-size: 14px; }
+    .sign-out { color: #666; text-decoration: none; font-size: 14px; }
+    .sign-out:hover { color: #1a1a1a; }
+
+    /* Main */
+    main { padding: 40px 0; }
+    .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .page-title { font-size: 28px; font-weight: 700; }
+    .btn-new { display: flex; align-items: center; gap: 8px; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; }
+    .btn-new:hover { background: #1d4ed8; }
+
+    /* Empty state */
+    .empty-state { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 64px 32px; text-align: center; }
+    .empty-icon { font-size: 48px; margin-bottom: 16px; }
+    .empty-state h3 { font-size: 20px; margin-bottom: 8px; }
+    .empty-state p { color: #666; margin-bottom: 24px; }
+
+    /* SOP List */
+    .sop-list { display: grid; gap: 16px; }
+    .sop-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; }
+    .sop-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #2563eb; }
+    .sop-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .sop-title { font-size: 18px; font-weight: 600; }
+    .sop-arrow { color: #ccc; }
+    .sop-description { color: #666; font-size: 14px; margin-bottom: 16px; }
+    .sop-meta { display: flex; gap: 24px; font-size: 13px; color: #888; }
+    .meta-item { display: flex; align-items: center; gap: 6px; }
+    .status-badge { padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 500; }
+    .status-draft { background: #f0f0f0; color: #666; }
+    .status-published { background: #dcfce7; color: #16a34a; }
+
+    /* Pro banner */
+    .pro-banner { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white; border-radius: 12px; padding: 24px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center; }
+    .pro-banner-text h3 { font-size: 18px; margin-bottom: 4px; }
+    .pro-banner-text p { opacity: 0.9; font-size: 14px; }
+    .pro-banner-btn { background: white; color: #2563eb; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">📄 SOP Builder</div>
+      <div class="user-menu">
+        <span class="user-email">herm@levinn.co.za</span>
+        <a href="#" class="sign-out">Sign out</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Pro Banner -->
+      <div class="pro-banner">
+        <div class="pro-banner-text">
+          <h3>🚀 Upgrade to Pro</h3>
+          <p>Get unlimited SOPs, templates, and AI suggestions for R499/month</p>
+        </div>
+        <a href="#" class="pro-banner-btn">Upgrade Now</a>
+      </div>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">My SOPs</h1>
+        <a href="#" class="btn-new">+ New SOP</a>
+      </div>
+
+      <!-- Empty State (shown when no SOPs) -->
+      <div class="empty-state">
+        <div class="empty-icon">📋</div>
+        <h3>No SOPs yet</h3>
+        <p>Create your first SOP to get started</p>
+        <a href="#" class="btn-new" style="display: inline-flex;">+ Create SOP</a>
+      </div>
+
+      <!-- SOP List (shown when SOPs exist) -->
+      <!-- Uncomment to see populated state -->
+      <!--
+      <div class="sop-list">
+        <a href="#" class="sop-card">
+          <div class="sop-header">
+            <div class="sop-title">Employee Onboarding Checklist</div>
+            <span class="sop-arrow">→</span>
+          </div>
+          <p class="sop-description">Complete onboarding process for new hires including documentation, equipment setup, and training schedule.</p>
+          <div class="sop-meta">
+            <span class="meta-item">📄 12 steps</span>
+            <span class="meta-item">👤 Owner: Sarah M.</span>
+            <span class="status-badge status-published">Published</span>
+          </div>
+        </a>
+        <a href="#" class="sop-card">
+          <div class="sop-header">
+            <div class="sop-title">Client Intake Process</div>
+            <span class="sop-arrow">→</span>
+          </div>
+          <p class="sop-description">Step-by-step process for onboarding new clients and setting up their accounts.</p>
+          <div class="sop-meta">
+            <span class="meta-item">📄 8 steps</span>
+            <span class="meta-item">👤 Owner: John D.</span>
+            <span class="status-badge status-draft">Draft</span>
+          </div>
+        </a>
+      </div>
+      -->
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offer Builder - Clarify Your Offer in 10 Minutes</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 16px 0; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 700; color: #8b5cf6; }
+    .logo-icon { width: 32px; height: 32px; background: #8b5cf6; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; }
+    .btn { padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.2s; }
+    .btn-outline { border: 1px solid #8b5cf6; color: #8b5cf6; }
+    .btn-outline:hover { background: #f5f3ff; }
+    .btn-primary { background: #8b5cf6; color: white; border: none; }
+    .btn-primary:hover { background: #7c3aed; }
+
+    .hero { background: linear-gradient(180deg, #f5f3ff 0%, #fff 100%); padding: 80px 0; text-align: center; }
+    .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+    .hero p { font-size: 20px; color: #666; max-width: 600px; margin: 0 auto 32px; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; font-size: 18px; }
+    .hero-note { margin-top: 16px; font-size: 14px; color: #888; }
+
+    .features { padding: 80px 0; background: #fff; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+    .features h2 { text-align: center; font-size: 32px; margin-bottom: 48px; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .feature-card { text-align: center; padding: 24px; }
+    .feature-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }
+    .feature-icon.purple { background: #e9d5ff; color: #8b5cf6; }
+    .feature-icon.blue { background: #dbeafe; color: #2563eb; }
+    .feature-icon.green { background: #dcfce7; color: #16a34a; }
+    .feature-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .feature-card p { color: #666; }
+
+    .preview { padding: 80px 0; background: #f9fafb; }
+    .preview h2 { text-align: center; font-size: 32px; margin-bottom: 48px; }
+    .preview-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 40px; max-width: 700px; margin: 0 auto; }
+    .offer-header { text-align: center; margin-bottom: 32px; }
+    .offer-title { font-size: 24px; font-weight: 700; color: #8b5cf6; margin-bottom: 16px; }
+    .offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .offer-item { background: #f9fafb; padding: 20px; border-radius: 8px; }
+    .offer-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 8px; }
+    .offer-value { font-size: 16px; font-weight: 500; }
+    .offer-value.highlight { color: #8b5cf6; font-weight: 600; }
+
+    .pricing { padding: 80px 0; }
+    .pricing h2 { text-align: center; font-size: 32px; margin-bottom: 8px; }
+    .pricing-note { text-align: center; color: #666; margin-bottom: 48px; }
+    .pricing-card { max-width: 400px; margin: 0 auto; background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+    .price { font-size: 48px; font-weight: 800; text-align: center; margin-bottom: 8px; }
+    .price-period { text-align: center; color: #666; margin-bottom: 32px; }
+    .pricing-features { list-style: none; margin-bottom: 32px; }
+    .pricing-features li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 12px; }
+    .pricing-features li:last-child { border-bottom: none; }
+    .check { color: #16a34a; font-weight: bold; }
+    .pricing-btn { display: block; width: 100%; padding: 16px; text-align: center; background: #8b5cf6; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .pricing-btn:hover { background: #7c3aed; }
+
+    footer { background: #f9fafb; border-top: 1px solid #e5e5e5; padding: 32px 0; text-align: center; color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <div class="logo-icon">🎯</div>
+        Offer Builder
+      </div>
+      <a href="#" class="btn btn-outline">Sign In</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Turn vague services into<br>crystal-clear offers</h1>
+        <p>Answer 4 simple questions and get a one-page offer document you can send to clients today. Problem, outcome, timeline, price — done in 10 minutes.</p>
+        <a href="#" class="btn btn-primary hero-cta">Build Your First Offer →</a>
+        <p class="hero-note">Free for first offer. R799/month for unlimited.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>From fuzzy to focused</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon purple">✨</div>
+            <h3>AI-Powered Clarity</h3>
+            <p>Our AI refines your rough ideas into clear, compelling offer language that clients understand.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon blue">📄</div>
+            <h3>One-Page Export</h3>
+            <p>Get a polished PDF you can share via email, WhatsApp, or LinkedIn. No design skills needed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green">💰</div>
+            <h3>Price With Confidence</h3>
+            <p>See what similar services charge and position your offer accordingly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview">
+      <div class="container">
+        <h2>Your offer, clarified</h2>
+        <div class="preview-card">
+          <div class="offer-header">
+            <div class="offer-title">🎯 Website Redesign Package</div>
+            <p style="color: #666;">For professional service firms upgrading their online presence</p>
+          </div>
+          <div class="offer-grid">
+            <div class="offer-item">
+              <div class="offer-label">Problem Solved</div>
+              <div class="offer-value">Outdated website losing leads and credibility</div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-label">Outcome Promised</div>
+              <div class="offer-value highlight">Modern, mobile-friendly site that converts visitors into consultations</div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-label">Timeline</div>
+              <div class="offer-value">3 weeks from kickoff to launch</div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-label">Investment</div>
+              <div class="offer-value highlight">R25,000 one-time (or R9,500/month x 3)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Simple pricing</h2>
+        <p class="pricing-note">First offer free. Unlimited at R799/month.</p>
+        <div class="pricing-card">
+          <div class="price">Free</div>
+          <div class="price-period">first offer</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Build one complete offer</li>
+            <li><span class="check">✓</span> AI refinement</li>
+            <li><span class="check">✓</span> PDF export</li>
+            <li><span class="check">✓</span> Shareable link</li>
+          </ul>
+          <a href="#" class="pricing-btn">Build Free Offer</a>
+        </div>
+        <p style="text-align: center; margin-top: 24px; color: #666; font-size: 14px;">
+          <strong>R799/month</strong> for unlimited offers, comparisons, and revenue tracking
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Offer Builder — Part of Levinn Business OS<br>
+      © 2026 Levinn Group
+    </div>
+  </footer>
+</body>
+</html>

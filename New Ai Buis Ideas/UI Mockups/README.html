@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Mockups - Levinn Business OS</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f9fafb; padding: 40px 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { font-size: 32px; margin-bottom: 16px; }
+    .subtitle { color: #666; margin-bottom: 32px; }
+    .product-section { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    .product-section h2 { font-size: 24px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .product-section p { color: #666; margin-bottom: 20px; }
+    .mockup-list { display: grid; gap: 12px; }
+    .mockup-item { display: flex; align-items: center; gap: 16px; padding: 16px; background: #f9fafb; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; }
+    .mockup-item:hover { background: #f0f0f0; transform: translateX(4px); }
+    .mockup-icon { font-size: 24px; }
+    .mockup-info { flex: 1; }
+    .mockup-title { font-weight: 600; }
+    .mockup-desc { font-size: 13px; color: #888; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+    .badge.landing { background: #dbeafe; color: #2563eb; }
+    .badge.dashboard { background: #dcfce7; color: #16a34a; }
+    .badge.editor { background: #e9d5ff; color: #8b5cf6; }
+    .badge.wizard { background: #ffedd5; color: #ea580c; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Levinn Business OS — UI Mockups</h1>
+    <p class="subtitle">Static HTML previews for all 3 products. Open any file in your browser to see the UI.</p>
+
+    <!-- SOP Builder -->
+    <div class="product-section">
+      <h2>📄 SOP Builder <span style="font-size: 14px; color: #2563eb; font-weight: 400;">Phase 4, Idea 1</span></h2>
+      <p>Document Standard Operating Procedures in 10 minutes. Target: R499/month.</p>
+      <div class="mockup-list">
+        <a href="01-sop-builder-landing.html" class="mockup-item">
+          <span class="mockup-icon">🏠</span>
+          <div class="mockup-info">
+            <div class="mockup-title">Landing Page</div>
+            <div class="mockup-desc">Hero, features, pricing — conversion-focused homepage</div>
+          </div>
+          <span class="badge landing">Landing</span>
+        </a>
+        <a href="02-sop-builder-dashboard.html" class="mockup-item">
+          <span class="mockup-icon">📊</span>
+          <div class="mockup-info">
+            <div class="mockup-title">Dashboard</div>
+            <div class="mockup-desc">List of all SOPs with status, step count, owner</div>
+          </div>
+          <span class="badge dashboard">Dashboard</span>
+        </a>
+        <a href="03-sop-builder-editor.html" class="mockup-item">
+          <span class="mockup-icon">✏️</span>
+          <div class="mockup-info">
+            <div class="mockup-title">SOP Editor</div>
+            <div class="mockup-desc">Add/reorder/delete steps, publish, export PDF</div>
+          </div>
+          <span class="badge editor">Editor</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Time Tracker -->
+    <div class="product-section">
+      <h2>⏱️ Time Tracker Dashboard <span style="font-size: 14px; color: #16a34a; font-weight: 400;">Phase 1, Idea 1</span></h2>
+      <p>Log tasks, auto-label low/high value work, weekly reports. Free with SOP Builder.</p>
+      <div class="mockup-list">
+        <a href="04-time-tracker-landing.html" class="mockup-item">
+          <span class="mockup-icon">🏠</span>
+          <div class="mockup-info">
+            <div class="mockup-title">Landing Page</div>
+            <div class="mockup-desc">Value prop, preview, pricing — "buy back your time"</div>
+          </div>
+          <span class="badge landing">Landing</span>
+        </a>
+        <a href="05-time-tracker-dashboard.html" class="mockup-item">
+          <span class="mockup-icon">📊</span>
+          <div class="mockup-info">
+            <div class="mockup-title">Dashboard</div>
+            <div class="mockup-desc">Weekly stats, category breakdown, recent entries</div>
+          </div>
+          <span class="badge dashboard">Dashboard</span>
+        </a>
+        <a href="06-time-tracker-entry.html" class="mockup-item">
+          <span class="mockup-icon">➕</span>
+          <div class="mockup-info">
+            <div class="mockup-title">Log Time</div>
+            <div class="mockup-desc">5-minute manual entry form with auto value labeling</div>
+          </div>
+          <span class="badge wizard">Entry</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Offer Builder -->
+    <div class="product-section">
+      <h2>🎯 Offer Builder Tool <span style="font-size: 14px; color: #8b5cf6; font-weight: 400;">Phase 2, Idea 1</span></h2>
+      <p>4-step wizard to clarify offers. Problem, outcome, timeline, price. R799/month.</p>
+      <div class="mockup-list">
+        <a href="07-offer-builder-landing.html" class="mockup-item">
+          <span class="mockup-icon">🏠</span>
+          <div class="mockup-info">
+            <div class="mockup-title">Landing Page</div>
+            <div class="mockup-desc">Hero, features, offer preview, pricing</div>
+          </div>
+          <span class="badge landing">Landing</span>
+        </a>
+        <a href="08-offer-builder-wizard.html" class="mockup-item">
+          <span class="mockup-icon">🪄</span>
+          <div class="mockup-info">
+            <div class="mockup-title">4-Step Wizard</div>
+            <div class="mockup-desc">Guided flow with AI enhancement at each step</div>
+          </div>
+          <span class="badge wizard">Wizard</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Build Status -->
+    <div class="product-section" style="background: #f0fdf4; border-color: #bbf7d0;">
+      <h2 style="color: #16a34a;">✅ Build Status</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+        <thead>
+          <tr style="border-bottom: 1px solid #bbf7d0;">
+            <th style="text-align: left; padding: 12px 8px; color: #16a34a;">Product</th>
+            <th style="text-align: left; padding: 12px 8px; color: #16a34a;">Code</th>
+            <th style="text-align: left; padding: 12px 8px; color: #16a34a;">Mockups</th>
+            <th style="text-align: left; padding: 12px 8px; color: #16a34a;">Next</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #dcfce7;">
+            <td style="padding: 12px 8px;"><strong>SOP Builder</strong></td>
+            <td style="padding: 12px 8px;">✅ Complete</td>
+            <td style="padding: 12px 8px;">✅ 3 screens</td>
+            <td style="padding: 12px 8px;">Supabase setup + deploy</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #dcfce7;">
+            <td style="padding: 12px 8px;"><strong>Time Tracker</strong></td>
+            <td style="padding: 12px 8px;">⏳ Pending</td>
+            <td style="padding: 12px 8px;">✅ 3 screens</td>
+            <td style="padding: 12px 8px;">Start build after SOP deploy</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 8px;"><strong>Offer Builder</strong></td>
+            <td style="padding: 12px 8px;">⏳ Pending</td>
+            <td style="padding: 12px 8px;">✅ 2 screens</td>
+            <td style="padding: 12px 8px;">Start build after Time Tracker</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

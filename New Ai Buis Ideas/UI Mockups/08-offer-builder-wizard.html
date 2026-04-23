@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Offer - Offer Builder</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f9fafb; }
+    .container { max-width: 768px; margin: 0 auto; padding: 0 20px; }
+
+    header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 16px 0; }
+    .back-link { color: #8b5cf6; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+
+    main { padding: 40px 0; }
+
+    /* Progress */
+    .progress { margin-bottom: 32px; }
+    .progress-steps { display: flex; justify-content: space-between; position: relative; }
+    .progress-steps::before { content: ''; position: absolute; top: 16px; left: 0; right: 0; height: 2px; background: #e5e5e5; z-index: 0; }
+    .progress-step { display: flex; flex-direction: column; align-items: center; gap: 8px; position: relative; z-index: 1; }
+    .progress-number { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; }
+    .progress-number.active { background: #8b5cf6; color: white; }
+    .progress-number.completed { background: #dcfce7; color: #16a34a; }
+    .progress-number.pending { background: #fff; border: 2px solid #e5e5e5; color: #888; }
+    .progress-label { font-size: 12px; color: #666; white-space: nowrap; }
+    .progress-label.active { color: #8b5cf6; font-weight: 500; }
+
+    /* Form Card */
+    .form-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 32px; }
+    .step-indicator { font-size: 13px; color: #8b5cf6; font-weight: 500; margin-bottom: 8px; }
+    .form-card h1 { font-size: 24px; margin-bottom: 8px; }
+    .form-card p { color: #666; margin-bottom: 32px; }
+
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-weight: 500; margin-bottom: 8px; }
+    .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-family: inherit; font-size: 15px; resize: vertical; min-height: 120px; }
+    .form-group textarea:focus { outline: 2px solid #8b5cf6; border-color: transparent; }
+    .form-group .hint { font-size: 13px; color: #888; margin-top: 6px; }
+
+    .ai-suggest { background: #f5f3ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px; margin-top: 16px; display: flex; align-items: center; gap: 12px; }
+    .ai-badge { background: #8b5cf6; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .ai-suggest-btn { background: #8b5cf6; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+    .ai-suggest-btn:hover { background: #7c3aed; }
+
+    .form-actions { display: flex; gap: 12px; padding-top: 24px; border-top: 1px solid #e5e5e5; justify-content: space-between; }
+    .form-actions-left { display: flex; gap: 12px; }
+    .btn { padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 15px; cursor: pointer; border: none; text-decoration: none; display: inline-block; }
+    .btn-primary { background: #8b5cf6; color: white; }
+    .btn-primary:hover { background: #7c3aed; }
+    .btn-secondary { background: #fff; border: 1px solid #d1d5db; color: #374151; }
+    .btn-secondary:hover { background: #f9fafb; }
+    .btn-ghost { background: transparent; color: #666; }
+    .btn-ghost:hover { background: #f9fafb; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#" class="back-link">← Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Progress -->
+      <div class="progress">
+        <div class="progress-steps">
+          <div class="progress-step">
+            <div class="progress-number completed">✓</div>
+            <div class="progress-label">Problem</div>
+          </div>
+          <div class="progress-step">
+            <div class="progress-number active">2</div>
+            <div class="progress-label active">Outcome</div>
+          </div>
+          <div class="progress-step">
+            <div class="progress-number pending">3</div>
+            <div class="progress-label">Timeline</div>
+          </div>
+          <div class="progress-step">
+            <div class="progress-number pending">4</div>
+            <div class="progress-label">Price</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-card">
+        <div class="step-indicator">STEP 2 OF 4</div>
+        <h1>What outcome do you promise?</h1>
+        <p>Be specific about what clients get. Tangible results beat vague promises.</p>
+
+        <form>
+          <div class="form-group">
+            <label for="outcome">Describe the outcome</label>
+            <textarea id="outcome" placeholder="e.g., A modern, mobile-friendly website that converts visitors into booked consultations. You'll have a site you're proud to share and that clearly communicates your value to prospects."></textarea>
+            <div class="hint">Think: what will the client have/experience after working with you?</div>
+
+            <div class="ai-suggest">
+              <span class="ai-badge">AI</span>
+              <span style="color: #666; font-size: 13px;">Get clearer, more compelling language</span>
+              <button type="button" class="ai-suggest-btn">✨ Enhance with AI</button>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <div class="form-actions-left">
+              <button type="button" class="btn btn-ghost">← Back</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Next: Timeline →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
