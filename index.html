@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Levinn Workwear — Product Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "#ffd500",
+  "showTrustFooter": true,
+  "showCompliance": true
+}/*EDITMODE-END*/;
+
+    function applyTweaks() {
+      const style = document.documentElement.style;
+      style.setProperty('--accent-orange', TWEAK_DEFAULTS.accentColor);
+      style.setProperty('--accent-orange-hover', adjustColor(TWEAK_DEFAULTS.accentColor, -20));
+      style.setProperty('--accent-orange-glow', hexToRgba(TWEAK_DEFAULTS.accentColor, 0.18));
+      style.setProperty('--border-orange', hexToRgba(TWEAK_DEFAULTS.accentColor, 0.35));
+
+      const trustFooter = document.querySelector('.trust-footer');
+      if (trustFooter) trustFooter.style.display = TWEAK_DEFAULTS.showTrustFooter ? 'flex' : 'none';
+
+      const complianceBar = document.querySelector('.compliance-bar');
+      if (complianceBar) complianceBar.style.display = TWEAK_DEFAULTS.showCompliance ? 'flex' : 'none';
+    }
+
+    function adjustColor(hex, amount) {
+      let r = parseInt(hex.slice(1, 3), 16) + amount;
+      let g = parseInt(hex.slice(3, 5), 16) + amount;
+      let b = parseInt(hex.slice(5, 7), 16) + amount;
+      r = Math.max(0, Math.min(255, r));
+      g = Math.max(0, Math.min(255, g));
+      b = Math.max(0, Math.min(255, b));
+      return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+    }
+
+    function hexToRgba(hex, alpha) {
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyTweaks);
+    } else {
+      applyTweaks();
+    }
+  </script>
+  <style>
+    /* ─── Tokens ─── */
+    :root {
+      --bg-navy: #0A1628;
+      --bg-navy-light: #101D30;
+      --bg-navy-lighter: #152440;
+      --accent-orange: #FF6B00;
+      --accent-orange-hover: #E05A00;
+      --accent-orange-glow: rgba(255, 107, 0, 0.18);
+      --text-primary: #F5F6F8;
+      --text-secondary: #9BA3B4;
+      --text-muted: #6B7A94;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-orange: rgba(255, 107, 0, 0.35);
+      --radius: 0;
+      --shadow-orange: 0 0 0 1px var(--border-orange), 0 12px 40px -8px rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-navy);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle radial vignette + noise texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,107,0,0.06), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(21,36,64,0.8), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .page-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* ─── Card ─── */
+    .product-card {
+      background: linear-gradient(180deg, var(--bg-navy-light) 0%, #0C1829 100%);
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 24px 60px -16px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+      overflow: hidden;
+    }
+
+    /* ─── Card Header / Image Area ─── */
+    .card-image-area {
+      position: relative;
+      background: linear-gradient(160deg, var(--bg-navy-lighter) 0%, var(--bg-navy) 70%);
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* Technical grid overlay pattern */
+    .card-image-area::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,107,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,107,0,0.04) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    /* Accent corner brackets */
+    .corner-bracket {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: var(--accent-orange);
+      border-style: solid;
+      opacity: 0.5;
+    }
+    .corner-bracket.tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+    .corner-bracket.tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+    .corner-bracket.bl { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+    .corner-bracket.br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+
+    .product-image {
+      width: 220px;
+      height: 180px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-label {
+      position: absolute;
+      bottom: -10px;
+      right: 10px;
+      background: var(--accent-orange);
+      color: var(--bg-navy);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      z-index: 2;
+    }
+
+    /* ─── Card Body ─── */
+    .card-body {
+      padding: 1.75rem 1.75rem 1.5rem;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .brand-logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+    }
+
+    .brand-divider {
+      width: 1px;
+      height: 12px;
+      background: var(--text-muted);
+    }
+
+    .brand-slogan {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .product-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .product-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ─── Specs ─── */
+    .specs-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .spec-tag {
+      border: 1px solid var(--border-subtle);
+      padding: 5px 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .spec-tag.highlight {
+      border-color: var(--border-orange);
+      color: var(--accent-orange);
+      background: var(--accent-orange-glow);
+    }
+
+    /* ─── Compliance Bar ─── */
+    .compliance-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 0.85rem;
+      background: rgba(255,107,0,0.06);
+      border-left: 3px solid var(--accent-orange);
+      margin-bottom: 1.5rem;
+    }
+
+    .compliance-bar svg {
+      flex-shrink: 0;
+      color: var(--accent-orange);
+    }
+
+    .compliance-text {
+      font-size: 0.75rem;
+      line-height: 1.4;
+      color: var(--text-secondary);
+    }
+
+    .compliance-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ─── Pricing & CTA ─── */
+    .price-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .price-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .price-value {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .price-value span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-left: 2px;
+    }
+
+    .btn-quote {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-orange);
+      color: #fff;
+      border: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.4rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-quote:hover {
+      background: var(--accent-orange-hover);
+      box-shadow: 0 0 24px -4px rgba(255,107,0,0.4);
+    }
+
+    .btn-quote:active {
+      transform: translateY(1px);
+    }
+
+    .btn-quote svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ─── Trust Footer ─── */
+    .trust-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.75rem;
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .trust-item svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+    }
+
+    .sa-flag {
+      display: inline-block;
+      width: 14px;
+      height: 10px;
+      background: linear-gradient(180deg, #007A4D 33%, #FFB81C 33%, #FFB81C 66%, #DE3831 66%);
+      border-radius: 1px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <article class="product-card">
+
+      <!-- Image Area -->
+      <div class="card-image-area">
+        <div class="corner-bracket tl"></div>
+        <div class="corner-bracket tr"></div>
+        <div class="corner-bracket bl"></div>
+        <div class="corner-bracket br"></div>
+
+        <div class="product-image">
+          <!-- Stylised nitrile-coated work gloves SVG -->
+          <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Nitrile-Coated Cut-Resistant Gloves product illustration">
+            <defs>
+              <linearGradient id="gloveGrad" x1="30" y1="10" x2="190" y2="170" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1A2942"/>
+                <stop offset="100%" stop-color="#0D1522"/>
+              </linearGradient>
+              <linearGradient id="coatingGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#E05A00" stop-opacity="0.95"/>
+              </linearGradient>
+              <pattern id="grid" width="6" height="6" patternUnits="userSpaceOnUse">
+                <path d="M 6 0 L 0 0 0 6" fill="none" stroke="rgba(255,107,0,0.12)" stroke-width="0.8"/>
+              </pattern>
+              <pattern id="knit" width="4" height="4" patternUnits="userSpaceOnUse">
+                <path d="M0 0h4v4H0z" fill="none"/>
+                <circle cx="1" cy="1" r="0.6" fill="rgba(255,255,255,0.08)"/>
+                <circle cx="3" cy="3" r="0.6" fill="rgba(255,255,255,0.08)"/>
+              </pattern>
+              <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+                <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+              </filter>
+            </defs>
+
+            <!-- Back glove -->
+            <g filter="url(#shadow)">
+              <path d="M70 155 L70 120 C70 115 74 112 78 112 L82 112 C86 112 90 115 90 120 L90 155" fill="url(#gloveGrad)"/>
+              <path d="M90 155 L90 115 C90 108 96 102 103 102 L107 102 C114 102 120 108 120 115 L120 155" fill="url(#gloveGrad)"/>
+              <path d="M120 155 L120 108 C120 101 126 95 133 95 L137 95 C144 95 150 101 150 108 L150 155" fill="url(#gloveGrad)"/>
+              <path d="M150 155 L150 112 C150 105 156 100 163 100 L167 100 C174 100 180 105 180 112 L180 155" fill="url(#gloveGrad)"/>
+              <path d="M68 155 L65 80 C64 65 75 55 85 55 L165 58 C178 59 185 70 184 80 L177 155 Z" fill="url(#gloveGrad)"/>
+              <!-- Cuff band -->
+              <rect x="66" y="148" width="112" height="14" rx="2" fill="#FF6B00" opacity="0.85"/>
+              <rect x="66" y="148" width="112" height="14" rx="2" fill="url(#grid)" opacity="0.3"/>
+            </g>
+
+            <!-- Front glove -->
+            <g filter="url(#shadow)">
+              <path d="M50 155 L50 125 C50 120 54 117 58 117 L62 117 C66 117 70 120 70 125 L70 155" fill="url(#gloveGrad)"/>
+              <path d="M70 155 L70 120 C70 113 76 108 83 108 L87 108 C94 108 100 113 100 120 L100 155" fill="url(#gloveGrad)"/>
+              <path d="M100 155 L100 113 C100 106 106 100 113 100 L117 100 C124 100 130 106 130 113 L130 155" fill="url(#gloveGrad)"/>
+              <path d="M130 155 L130 118 C130 111 136 106 143 106 L147 106 C154 106 160 111 160 118 L160 155" fill="url(#gloveGrad)"/>
+              <path d="M48 155 L44 82 C43 67 55 58 66 58 L150 60 C164 61 170 72 169 82 L160 155 Z" fill="url(#gloveGrad)"/>
+              <!-- Nitrile coating pattern on palm -->
+              <path d="M48 155 L44 82 C43 67 55 58 66 58 L150 60 C164 61 170 72 169 82 L160 155 Z" fill="url(#knit)"/>
+              <!-- Palm coating highlight -->
+              <path d="M55 150 L52 95 C51 88 58 82 65 82 L145 84 C152 84 158 90 157 97 L152 150 Z" fill="url(#coatingGrad)" opacity="0.12"/>
+              <!-- Cuff band -->
+              <rect x="46" y="148" width="116" height="14" rx="2" fill="#FF6B00"/>
+              <rect x="46" y="148" width="116" height="14" rx="2" fill="url(#grid)" opacity="0.35"/>
+              <!-- Cuff ribbing lines -->
+              <line x1="60" y1="148" x2="60" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+              <line x1="75" y1="148" x2="75" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+              <line x1="90" y1="148" x2="90" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+              <line x1="105" y1="148" x2="105" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+              <line x1="120" y1="148" x2="120" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+              <line x1="135" y1="148" x2="135" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+              <line x1="150" y1="148" x2="150" y2="162" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            </g>
+          </svg>
+        </div>
+        <div class="image-label">Cut Level 5</div>
+      </div>
+
+      <!-- Body -->
+      <div class="card-body">
+        <div class="brand-row">
+          <span class="brand-logo-text">Levinn Workwear</span>
+          <span class="brand-divider"></span>
+          <span class="brand-slogan">Built for Industry</span>
+        </div>
+
+        <h1 class="product-title">Nitrile-Coated Cut-Resistant Gloves</h1>
+        <p class="product-subtitle">Seamless HPPE liner with sandy nitrile palm coating. Superior dexterity for precision handling in abrasive environments.</p>
+
+        <div class="specs-row">
+          <span class="spec-tag highlight">Cut Level 5</span>
+          <span class="spec-tag">EN 388</span>
+          <span class="spec-tag">SANS 1387</span>
+          <span class="spec-tag">Sizes 7–11</span>
+        </div>
+
+        <div class="compliance-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          <span class="compliance-text">
+            <strong>SANS 1387:2018 Compliant</strong> — Certified for South African industrial PPE standards. Bulk SABS testing records available on request.
+          </span>
+        </div>
+
+        <div class="price-cta-row">
+          <div class="price-block">
+            <span class="price-label">Unit Price</span>
+            <span class="price-value">R89<span>/pair</span></span>
+          </div>
+          <button class="btn-quote" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <path d="M14 2v6h6"/>
+              <path d="M16 13H8"/>
+              <path d="M16 17H8"/>
+              <path d="M10 9H8"/>
+            </svg>
+            Add to Quote
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="trust-footer">
+        <div class="trust-item">
+          <span class="sa-flag" aria-hidden="true"></span>
+          SA Manufactured
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+          </svg>
+          B-BBEE Level 2
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          24–48h Lead Time
+        </div>
+      </div>
+
+    </article>
+  </div>
+</body>
+</html>
